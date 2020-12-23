@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Text.destroy_all
+class ImportCsv
+  def self.import(path)
+      CSV.foreach(path, headers: true) do |row|
+        Text.create!(
+          genre: row["genre"]
+          title: row["title"]
+          content: row["content"]
+        )
+      end
+  end
+end

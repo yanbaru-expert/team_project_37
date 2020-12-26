@@ -1,7 +1,5 @@
 class Movie < ApplicationRecord
   with_options presence: true do
-    validates :genre
-    validates :title
-    validates :url
+    validates :genre, :title, :url
   end
 end

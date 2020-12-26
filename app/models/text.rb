@@ -1,7 +1,5 @@
 class Text < ApplicationRecord
   with_options presence: true do
-    validates :genre
-    validates :title
-    validates :content
+    validates :genre, :title, :content
   end
 end

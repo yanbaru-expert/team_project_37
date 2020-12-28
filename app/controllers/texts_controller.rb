@@ -1,4 +1,6 @@
-class TextsController < ApplicationController 
+class TextsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
 
   end

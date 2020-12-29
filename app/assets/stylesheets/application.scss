@@ -2,6 +2,7 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap/scss/bootstrap";
 
 /* 全体 */
  .base-container {
@@ -21,4 +22,5 @@
  .mw-xl {
    max-width: 1200px;
  }
+
 

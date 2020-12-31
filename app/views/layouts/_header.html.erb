@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light">
-  <a class="navbar-brand" href="/">やんばるCODE</a>
+  <%= link_to "やんばるCODE","/", class: "navbar-brand" %>
+  <%# <a class="navbar-brand" href="/">やんばるCODE</a> %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,12 +12,11 @@
           Rails
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Ruby/Rails教材</a>
-          <a class="dropdown-item" href="#">動画教材</a>
-          <a class="dropdown-item" href="#">AWS講座</a>
-          <a class="dropdown-item" href="#">プログラミング勉強会</a>
-          <a class="dropdown-item" href="#">質問集</a>
-          <a class="dropdown-item" href="#">チャレンジ問題集</a>
+          <%= link_to "Ruby/Rails教材","#", class: "dropdown-item" %>
+          <%= link_to "AWS講座","#", class: "dropdown-item" %>
+          <%= link_to "プログラミング勉強会","#", class: "dropdown-item" %>
+          <%= link_to "質問集","#", class: "dropdown-item" %>
+          <%= link_to "チャレンジ問題集","#", class: "dropdown-item" %>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -24,26 +24,26 @@
           PHP
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">PHPテキスト教材</a>
-          <a class="dropdown-item" href="#">PHP動画教材</a>
+          <%= link_to "PHPテキスト教材","#", class: "dropdown-item" %>
+          <%= link_to "PHP動画教材","#", class: "dropdown-item" %>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">対談</a>
+        <%= link_to "対談","#", class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">マネタイズ講座</a>
+        <%= link_to "マネタイズ講座","#", class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">LINE</a>
+        <%= link_to "LINE","#", class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           マイページ
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">進捗管理</a>
-          <a class="dropdown-item" href="/users/edit">アカウント編集</a>
+          <%= link_to "進捗管理","#", class: "dropdown-item" %>
+          <%= link_to "アカウント編集","/users/edit", class: "dropdown-item" %>
         </div>
       </li>
       <% if user_signed_in? %>

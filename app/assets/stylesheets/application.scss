@@ -48,3 +48,11 @@
  main {
    padding-top: 56px;
  }
+
+ .alert-notice {
+   @extend .alert-info;
+ }
+
+ .alert-alert {
+   @extend .alert-danger;
+ }

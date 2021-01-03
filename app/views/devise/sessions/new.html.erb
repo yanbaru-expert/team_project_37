@@ -1,0 +1,51 @@
+<div class="container-login">
+  <h2><%= t('.sign_in') %></h2>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-group">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email", required: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, class: "form-control", autocomplete: "current-password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.submit t('.sign_in'), class:"btn btn-primary btn-block" %>
+    </div>
+  <% end %>
+
+  <div class="card">
+    <div class="card-header">
+      <h5>教材について</h5>
+    </div>
+    <div class="card-body">
+      <p class="card-text">この教材は、やんばるCODEオンライン、やんばるエキスパートの会員の方のみの限定公開となっています。</p>
+      <p class="card-text">申し込みは以下のページよりお願いします。</p>
+    </div>
+    <div class="card-body">
+      <a href="#" class="card-link">やんばるCODE  オンライン</a></br></br>
+      <a href="#" class="card-link">やんばるCODE  エキスパート</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h5>案内</h5>
+    </div>
+    <div class="card-body">
+      <p class="card-text">先日まで，共通のアカウントでログインを行う方式を採用しておりましたが，各自でログインを行う方式に切り替えさせていただきました。</p>
+      <p class="card-text">アカウントの新規登録をまだ済まされていない方は以下のリンクからお願いいたします。メールアドレス・パスワードはご自由に設定下さい。</p>
+      <%= link_to "新規登録", new_user_registration_path, class:"btn btn-success btn-block" %>
+    </div>
+  </div>
+</div>

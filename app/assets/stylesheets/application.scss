@@ -2,71 +2,80 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap/scss/bootstrap";
+
+@import "bootstrap/scss/bootstrap";
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
 
 /* 全体 */
- .base-container {
-   margin: 0 auto;
-   padding: 1rem;
- }
 
- .container-login {
-   max-width: 576px;
-   margin: 0 auto;
- }
+.base-container {
+    margin: 0 auto;
+    padding: 1rem;
+}
 
- /* max-width */
- .mw-md {
-   max-width: 720px;
- }
+.container-login {
+    max-width: 576px;
+    margin: 0 auto;
+}
 
- .mw-lg {
-   max-width: 960px;
- }
 
- .mw-xl {
-   max-width: 1200px;
- }
+/* max-width */
 
- header {
-   background-color: #5D99FF;
- }
+.mw-md {
+    max-width: 720px;
+}
 
- nav {
-   width: 768px;
-   margin: 0 auto;
- }
+.mw-lg {
+    max-width: 960px;
+}
 
- .navbar .navbar-brand {
-   color: white;
- }
+.mw-xl {
+    max-width: 1200px;
+}
 
- .navbar-collapse {
-  justify-content: flex-end;
- }
+header {
+    background-color: #5D99FF;
+}
 
- .navbar .navbar-nav .nav-link {
-   color: white;
-   font-size: 13px;
-  }
+nav {
+    width: 768px;
+    margin: 0 auto;
+}
 
- main {
-   padding-top: 56px;
- }
+.navbar .navbar-brand {
+    color: white;
+}
 
- .alert-notice {
-   @extend .alert-info;
- }
+.navbar-collapse {
+    justify-content: flex-end;
+}
 
- .alert-alert {
-   @extend .alert-danger;
- }
+.navbar .navbar-nav .nav-link {
+    color: white;
+    font-size: 13px;
+}
 
- h2 {
-   text-align: center;
-   padding-top: 140px;
- }
+main {
+    padding-top: 56px;
+}
 
- .card {
-  margin-top: 50px;
- }
+.alert-notice {
+    @extend .alert-info;
+}
+
+.alert-alert {
+    @extend .alert-danger;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 140px;
+}
+
+h1 {
+    padding: 20px 0px 10px 0px;
+    font-size: 2rem;
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+.search-form .search-icon {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    z-index: 1;
+}
+
+.search-form {
+    position: relative;
+    width: 350px;
+}
+
+#search-text {
+    padding-left: 50px;
+    height: 50px;
+}

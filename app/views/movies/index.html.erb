@@ -1,0 +1,25 @@
+<div class="base-container mw-xl">
+  <div class="texts-wrapper mt-5">
+    <div class="row">
+      <% @movies.each.with_index(1) do |movie,i| %>
+        <div class="col-12 col-md-6 col-lg-4 movie-card-container">
+          <div class="card content-card border-dark mb-3">
+            <div class="card-header p-0">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src=<%= movie.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="card-body text-dark text-card-body">
+              <div>
+                <object><a class="btn btn-secondary btn-block">視聴済みにする</a></object>
+              </div>
+              <p class="card-text movie-title">
+                Lv.<%= i %>：<%= movie.title %>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
